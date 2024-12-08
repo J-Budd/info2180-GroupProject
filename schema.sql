@@ -7,7 +7,7 @@ CREATE TABLE `users`(
     `id` INTEGER(12) NOT NULL auto_increment,
     `firstname` VARCHAR(32) DEFAULT NULL,
     `lastname` VARCHAR(32) DEFAULT NULL,
-    `password` VARCHAR(20) DEFAULT NULL,
+    `password` VARCHAR(65) DEFAULT NULL,
     `email` VARCHAR(32) DEFAULT NULL,
     `role` enum('Member','Admin') NOT NULL DEFAULT 'Member',
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
