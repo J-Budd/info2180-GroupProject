@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphin CRM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="ajax_functions.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dolphin CRM</h1>
+    </header>
+    
+    <main>
+        <section id="contact-section">
+            <h2>Contacts</h2>
+            <div id="contact-list">
+                <!-- Contacts will be dynamically loaded here -->
+            </div>
+            <button onclick="showContactForm()">Add Contact</button>
+        </section>
+
+        <section id="notes-section">
+            <h2>Notes</h2>
+            <div id="notes-list">
+                <!-- Notes will be dynamically loaded here -->
+            </div>
+            <button onclick="showNoteForm()">Add Note</button>
+        </section>
+    </main>
+
+    <script>
+        // Fetch initial data on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchContacts();
+            // Fetch notes for a specific contact when needed
+            // fetchNotes(contactId);
+        });
+    </script>
+</body>
+</html>
